@@ -1,26 +1,30 @@
-## [NEXTSTEP 플레이그라운드의 미션 진행 과정](https://github.com/next-step/nextstep-docs/blob/master/playground/README.md)
+## 기본 로직
 
 ---
-## 학습 효과를 높이기 위해 추천하는 미션 진행 방법
+1. int 타입의 strike, ball과 String 타입의 randomNumber 멤버변수를 생성한다.
+2. main 실행 시 랜덤한 3자리의 수를 만들어서 멤버변수에 저장한다.
+3. 사용자로부터 입력을 받는다. 
+   - 같은 자리에 있을때(index와 값이 같음) :  스트라이크++
+   - 문자열이 contain하고 있고, 자리는 같지 않을때 : 볼++
+   - 둘다 아닐경우 nothing 출력
+4. 3스트라이크가 나올때까지 반복한다.
+
+## 요구사항
 
 ---
-1. 피드백 강의 전까지 미션 진행 
-> 피드백 강의 전까지 혼자 힘으로 미션 진행. 미션을 진행하면서 하나의 작업이 끝날 때 마다 add, commit
-> 예를 들어 다음 숫자 야구 게임의 경우 0, 1, 2단계까지 구현을 완료한 후 push
+1. 자바 코드 컨벤션 지킬것.
+2. 인덴트는 1까지만 허용
+3. else 사용 금지
+4. 모든 로직에 단위 테스트 구현
+   - 핵심 로직과 UI 로직 분리
+   - UI로직을 별개의 클래스로 분리
+5. 3항 연산자 금지
+6. 함수를 최대한 작게 만들것.
 
-![mission baseball](https://raw.githubusercontent.com/next-step/nextstep-docs/master/playground/images/mission_baseball.png)
+## 구현할 기능
 
 ---
-2. 피드백 앞 단계까지 미션 구현을 완료한 후 피드백 강의를 학습한다.
-
----
-3. Git 브랜치를 master 또는 main으로 변경한 후 피드백을 반영하기 위한 새로운 브랜치를 생성한 후 처음부터 다시 미션 구현을 도전한다.
-
-```
-git branch -a // 모든 로컬 브랜치 확인
-git checkout master // 기본 브랜치가 master인 경우
-git checkout main // 기본 브랜치가 main인 경우
-
-git checkout -b 브랜치이름
-ex) git checkout -b apply-feedback
-```
+1. 랜덤한 숫자 만드는 메소드
+2. 스트라이크, 볼, 낫싱 판별하는 메소드
+3. 해당 작업을 반복하는 메소드
+4. Input의 길이를 판별하는 메소드
