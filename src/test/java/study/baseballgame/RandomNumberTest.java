@@ -3,6 +3,8 @@ package study.baseballgame;
 import com.baseballgame.RandomNumber;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+
 import static org.assertj.core.api.Assertions.assertThat;
 public class RandomNumberTest {
     @Test
@@ -16,12 +18,15 @@ public class RandomNumberTest {
     }
 
     @Test
-    @DisplayName("중복이 안되는 숫자를 반환하는가?")
+    @DisplayName("길이가 1~9이며 중복이 안되는 숫자를 반환하는가?")
     void makeOneRandomNumber(){
         String str = "12";
         String number = RandomNumber.makeOneRandomNumber(str);
+        assertThat(Integer.parseInt(number)>0 ).isTrue();
+        assertThat(Integer.parseInt(number)<10 ).isTrue();
         assertThat(!str.contains(number)).isTrue();
     }
+
 
     @Test
     @DisplayName("길이가 3인 랜덤 숫자를 반환하는가?")

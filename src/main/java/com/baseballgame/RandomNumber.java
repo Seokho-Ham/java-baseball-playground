@@ -2,10 +2,11 @@ package com.baseballgame;
 
 public class RandomNumber {
     public static String makeOneRandomNumber(String str) {
-        String number = Integer.toString((int) ((Math.random() * 10) + 1));
+        String number = String.valueOf((int)(Math.floor((Math.random() * 9)+1)));
         while (checkOverlap(str, number)) {
-            number = Integer.toString((int) ((Math.random() * 10) + 1));
+            number = String.valueOf((int)(Math.floor((Math.random() * 9)+1)));
         }
+        System.out.println(number);
         return number;
     }
 
