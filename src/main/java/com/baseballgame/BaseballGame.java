@@ -3,7 +3,7 @@ package com.baseballgame;
 import java.util.ArrayList;
 
 public class BaseballGame {
-    private String randomNumber;
+    public String randomNumber;
 
     public int checkStrike(int index, char num) {
         //num이 같은 위치면 return 1 아니면 0;
@@ -25,7 +25,7 @@ public class BaseballGame {
     }
 
 
-    boolean printResult(int s, int b) {
+    public boolean printResult(int s, int b) {
 
         if (s > 0 && b > 0) {
             System.out.printf("%d스트라이크 %d볼\n", s, b);
@@ -65,7 +65,6 @@ public class BaseballGame {
 
     public boolean startGame(boolean status) {
         randomNumber = RandomNumber.makeRandomNumbers();
-        System.out.println(randomNumber);
 
         while (!status) {
             String input = Input.inputValue();
