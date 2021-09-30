@@ -16,17 +16,16 @@ public class RandomNumbersTest {
     @Test
     @DisplayName("중복된 값 여부 테스트")
     void validateOverlap() {
-        String number1 = "123";
-        String number2 = "121";
-        assertThat(instance.validateOverlap(number1)).isTrue();
-        assertThat(instance.validateOverlap(number2)).isFalse();
+        String number = "12";
+        assertThat(instance.validateOverlap(number,"3")).isTrue();
+        assertThat(instance.validateOverlap(number, "1")).isFalse();
     }
 
     @Test
     @DisplayName("1~9의 범위 테스트")
     void validateRange() {
-        int number1 = 1;
-        int number2 = 10;
+        String number1 = "1";
+        String number2 = "10";
         assertThat(instance.validateRange(number1)).isTrue();
         assertThat(instance.validateRange(number2)).isFalse();
     }
