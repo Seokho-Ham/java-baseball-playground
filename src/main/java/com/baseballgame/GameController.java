@@ -1,7 +1,6 @@
 package com.baseballgame;
 
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class GameController {
     private static final String EXIT = "EXIT";
